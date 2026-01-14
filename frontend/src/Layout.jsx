@@ -30,6 +30,9 @@ export default function Layout() {
                             <Link to="/register-person" className="p-2 hover:bg-blue-700 rounded-full" title="Register Person">
                                 <UserPlus size={24} />
                             </Link>
+                            <Link to="/manage-admins" className="p-2 hover:bg-blue-700 rounded-full" title="Manage Admins">
+                                <Shield size={24} />
+                            </Link>
                             <button onClick={handleLogout} className="p-2 hover:bg-blue-700 rounded-full" title="Logout">
                                 <LogOut size={24} />
                             </button>

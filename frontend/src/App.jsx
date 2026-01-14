@@ -20,6 +20,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="create-gathering" element={<CreateGathering />} />
             <Route path="register-person" element={<PersonRegister />} />
+            <Route path="manage-admins" element={<ManageAdmins />} />
             <Route path="scan/:gatheringId" element={<ScanPage />} />
           </Route>
         </Route>
