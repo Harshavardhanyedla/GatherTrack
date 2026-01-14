@@ -1,5 +1,5 @@
 import { Outlet, Link, useNavigate } from 'react-router-dom';
-import { LogOut, Home, UserPlus, PlusCircle } from 'lucide-react';
+import { LogOut, Home, UserPlus, PlusCircle, Shield } from 'lucide-react';
 
 export default function Layout() {
     const navigate = useNavigate();

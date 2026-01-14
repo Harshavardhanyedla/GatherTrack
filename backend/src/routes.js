@@ -14,6 +14,25 @@ router.post('/login', async (req, res) => {
     }
 });
 
+// --- Admins (New) ---
+router.post('/admins', async (req, res) => {
+    try {
+        const { username, password } = req.body;
+        const existing = await Admin.findOne({ where: { username } });
+        if (existing) return res.status(400).json({ error: 'Username already exists' });
+
+        const admin = await Admin.create({ username, password });
+        res.json({ success: true, username: admin.username });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.get('/admins', async (req, res) => {
+    const admins = await Admin.findAll({ attributes: ['id', 'username', 'createdAt'] });
+    res.json(admins);
+});
+
 // --- Person ---
 router.post('/people', async (req, res) => {
     try {

@@ -1,10 +1,11 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './Layout';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import CreateGathering from './pages/CreateGathering';
 import PersonRegister from './pages/PersonRegister';
 import ScanPage from './pages/ScanPage';
+import ManageAdmins from './pages/ManageAdmins';
 import ProtectedRoute from './ProtectedRoute';
 
 function App() {
